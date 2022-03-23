@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    background-image: url('https://ahacafe.vn/_assets/assets/slideshow/banner_1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body{
+    width:100vw;
+    height:100vh;
+}
+.header{
+    width :100%;
+    height:70px;
+    background-color:black;
+    display: flex;
+}
+.header .home,
+.header .login,
+.header .menu{
+    width:10%;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 24px;
+}
+.header .home a,
+.header .login a,
+.header .menu a{
+    color: white;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 50px;
+}
+.header .home:hover,
+.header .login:hover,
+.header .menu:hover{
+    background-color: grey;
+}
+.container{
+    width:100%;
+    height:calc(100% - 70px);
+    overflow-y:auto;
+}
+.container .list{
+    display: flex;
+    width:100%;
+    height:100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.container .list .stores{
+    width:300px;
+    height:300px;
+    box-sizing: border-box ;
+    margin: 5%;
+    box-shadow:0 0  10px rgba(0,0,0,0.3);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: aliceblue;
+}
+.orderBar{
+    width: 300px;;
+    height: 80px;
+    box-sizing: border-box;
+    padding-top: 26px;
+    background-color: #00933a;
+    border-radius: 10px;
+    text-align: center;
+    margin-top:20%;
+    margin-left: 65%;
+    display: none;
+}
+.orderBar h2{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+.orderBar:hover{
+    box-shadow:0 0 20px rgba(0,0,0,0.3) ;
+}
+.container>div img{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+.search{
+    position: absolute;
+    top:5px;
+    left: 80%;
+    margin: 15px 0 0 0;
+}
+.search input{
+    width: 100px;
+    height: 30px;
+    border-radius:10px;
+    border: rgba(0,0,0,0.3) solid 2px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    transition: width 1s;
+}
+.search input:hover{
+    width: 300px;
+}

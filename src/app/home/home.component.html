@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AhaCafe</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="home">
+            <a routerLink="/home">Trang chủ</a>
+        </div>
+        <div class="menu">
+            <a routerLink="/menu">Menu</a>
+        </div>
+        <div class="login">
+            <a routerLink="/login">Đăng nhập</a>
+        </div>
+        <div class="search">
+            <input (keyup)="search()" type="text" name="search" placeholder="Tìm kiếm tên hoặc địa chỉ cửa hàng">
+        </div>
+    </div>
+    <div class="container">
+        <div class="orderBar">
+            <h2>
+                Đặt hàng online
+            </h2>
+        </div>
+        <div class="list">
+            <div class="stores" *ngFor="let store of stores">
+                <h3>{{store.Name}}</h3>
+                <h2>{{store.Address}}</h2>
+                <h2>{{store.Hotline}}</h2>
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbEh5XF7SSqg-FiSahKABPXu6aQroEr9_Gj4HL0NzJD4pb4N6s2MkQuyYboVqIVfMndi4&usqp=CAU">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

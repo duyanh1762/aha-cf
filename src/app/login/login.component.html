@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AhaCafe Login</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <form [formGroup]="ahaLoginForm" (ngSubmit)="onSubmit()">
+        <div class="branch">
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD2Ji8nrqoIBUaEv_EWV43gIjcs6kRt6AH_7Wii8fAOvC8CJtyYAUE6TCQ6XQ_u1mAdAc&usqp=CAU">
+        </div>
+        <h3>ĐĂNG NHẬP</h3>
+        <div class="user-name">
+            <input id="userName" type="text" formControlName="userName" placeholder="Enter username" required><br />
+            <div class="alert">
+                <span *ngIf="ahaLoginForm.controls.userName.value==''">This field is required</span>
+            </div>
+        </div>
+        <div class="password">
+            <input id="password" type="text" formControlName="password" placeholder="Password" required><br />
+            <div class="alert">
+                <span *ngIf="ahaLoginForm.controls.password.value==''">This field is required</span>
+            </div>
+            <button class="login" type="submit" [disabled]="!ahaLoginForm.valid">Đăng nhập</button><br>
+            <button class="come-back"><a routerLink="/">Quay lại </a></button>
+        </div>
+    </form>
+</body>
+
+</html>

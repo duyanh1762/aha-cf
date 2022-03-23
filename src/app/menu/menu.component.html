@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AhaCafe</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="header">
+        <div class="home">
+            <a routerLink="/home">Trang chủ</a>
+        </div>
+        <div class="menu">
+            <a routerLink="/menu">Menu</a>
+        </div>
+        <div class="login">
+            <a routerLink="/login">Đăng nhập</a>
+        </div>
+    </div>
+    <div class="contaier">
+        <div class="menu">
+            <table>
+                <tr>
+                    <th>Tên món</th>
+                    <th>Giá tiền</th>
+                </tr>
+                <tr *ngFor="let coffee of listCoffee">
+                    <td>{{coffee.Name}}</td>
+                    <td>{{coffee.Price}}</td>
+                </tr>
+                <tr *ngFor="let tea of listTea">
+                    <td>{{tea.Name}}</td>
+                    <td>{{tea.Price}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
